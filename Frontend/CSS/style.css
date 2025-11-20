@@ -384,19 +384,293 @@
            color: #666;
            font-size: 14px;
        }
-       .mini-button{
-              margin-top: 8px;
-              background: #6366f1;
-              color: white;
-              padding: 5px 10px;
-              border-radius: 12px;
-              font-size: 10px;
-              cursor: pointer;
+
+       .mini-button {
+           margin-top: 8px;
+           background: #6366f1;
+           color: white;
+           padding: 5px 10px;
+           border-radius: 12px;
+           font-size: 10px;
+           cursor: pointer;
        }
-         .mini-button:hover {
-              background: #4f46e5;
-         }
-         .logo-image {
-             width: 40px;
-             height: 40px;
-         }
+
+       .mini-button:hover {
+           background: #4f46e5;
+       }
+
+       .logo-image {
+           width: 40px;
+           height: 40px;
+       }
+
+
+       /* Модальне вікно кошика */
+       .cart-modal {
+           display: none;
+           position: fixed;
+           z-index: 1000;
+           right: 0;
+           top: 0;
+           width: 400px;
+           height: 100vh;
+           background: white;
+           box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+           overflow-y: auto;
+           animation: slideIn 0.3s ease;
+       }
+
+       @keyframes slideIn {
+           from {
+               transform: translateX(100%);
+           }
+
+           to {
+               transform: translateX(0);
+           }
+       }
+
+       .cart-header {
+           background: linear-gradient(135deg, #6366f1, #8b5cf6);
+           color: white;
+           padding: 20px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           position: sticky;
+           top: 0;
+           z-index: 10;
+       }
+
+       .cart-header h2 {
+           margin: 0;
+           font-size: 20px;
+       }
+
+       .close-cart {
+           background: none;
+           border: none;
+           color: white;
+           font-size: 28px;
+           cursor: pointer;
+           padding: 0;
+           width: 30px;
+           height: 30px;
+       }
+
+       .close-cart:hover {
+           opacity: 0.8;
+       }
+
+       .cart-content {
+           padding: 20px;
+       }
+
+       .cart-item {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 15px;
+           margin-bottom: 15px;
+           background: #f8f9fa;
+           border-radius: 10px;
+           gap: 10px;
+       }
+
+       .cart-item-info {
+           flex: 1;
+       }
+
+       .cart-item-info h4 {
+           margin: 0 0 5px 0;
+           font-size: 14px;
+       }
+
+       .cart-item-info p {
+           margin: 0;
+           color: #666;
+           font-size: 13px;
+       }
+
+       .cart-item-controls {
+           display: flex;
+           align-items: center;
+           gap: 8px;
+       }
+
+       .cart-item-controls button {
+           width: 28px;
+           height: 28px;
+           border: 1px solid #ddd;
+           background: white;
+           border-radius: 5px;
+           cursor: pointer;
+           font-size: 16px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+       }
+
+       .cart-item-controls button:hover {
+           background: #f0f0f0;
+       }
+
+       .cart-item-controls .remove-btn {
+           background: #ef4444;
+           color: white;
+           border: none;
+           font-size: 20px;
+       }
+
+       .cart-item-controls .remove-btn:hover {
+           background: #dc2626;
+       }
+
+       .cart-item-controls span {
+           min-width: 20px;
+           text-align: center;
+           font-weight: 600;
+       }
+
+       .cart-item-total {
+           font-weight: 600;
+           color: #6366f1;
+           min-width: 70px;
+           text-align: right;
+       }
+
+       .cart-summary {
+           border-top: 2px solid #e5e7eb;
+           padding-top: 20px;
+           margin-top: 20px;
+       }
+
+       .cart-summary-row {
+           display: flex;
+           justify-content: space-between;
+           margin-bottom: 10px;
+           font-size: 14px;
+       }
+
+       .cart-summary-row.total {
+           font-size: 18px;
+           font-weight: 700;
+           color: #6366f1;
+           padding-top: 10px;
+           border-top: 1px solid #e5e7eb;
+       }
+
+       .cart-actions {
+           display: flex;
+           flex-direction: column;
+           gap: 10px;
+           margin-top: 20px;
+       }
+
+       .cart-btn {
+           padding: 15px;
+           border: none;
+           border-radius: 10px;
+           font-size: 16px;
+           font-weight: 600;
+           cursor: pointer;
+           transition: all 0.3s;
+       }
+
+       .checkout-btn {
+           background: linear-gradient(135deg, #6366f1, #8b5cf6);
+           color: white;
+       }
+
+       .checkout-btn:hover {
+           transform: translateY(-2px);
+           box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+       }
+
+       .clear-btn {
+           background: white;
+           border: 2px solid #ef4444;
+           color: #ef4444;
+       }
+
+       .clear-btn:hover {
+           background: #ef4444;
+           color: white;
+       }
+
+       .notification {
+           position: fixed;
+           top: 20px;
+           right: 20px;
+           background: linear-gradient(135deg, #10b981, #059669);
+           color: white;
+           padding: 15px 25px;
+           border-radius: 10px;
+           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+           z-index: 2000;
+           opacity: 0;
+           transform: translateX(400px);
+           transition: all 0.3s ease;
+       }
+
+       .notification.show {
+           opacity: 1;
+           transform: translateX(0);
+       }
+
+       .cart-overlay {
+           display: none;
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background: rgba(0, 0, 0, 0.5);
+           z-index: 999;
+       }
+
+       .cart-overlay.active {
+           display: block;
+       }
+
+       /* Анімація для порожнього кошика */
+       .empty-cart {
+           text-align: center;
+           padding: 60px 20px;
+           color: #666;
+       }
+
+       .empty-cart-icon {
+           font-size: 80px;
+           margin-bottom: 20px;
+           opacity: 0.3;
+       }
+
+       /* Адаптивність */
+       @media (max-width: 768px) {
+           .cart-modal {
+               width: 100%;
+           }
+       }
+
+       /* Стилі для badge на іконці кошика */
+       .cart-badge {
+           position: relative;
+       }
+
+       .cart-badge::after {
+           content: attr(data-count);
+           position: absolute;
+           top: -8px;
+           right: -8px;
+           background: #ef4444;
+           color: white;
+           border-radius: 50%;
+           width: 18px;
+           height: 18px;
+           font-size: 11px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           font-weight: bold;
+       }

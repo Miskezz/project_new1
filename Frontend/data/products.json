@@ -1,0 +1,136 @@
+{
+  "products": [
+    {
+      "id": "macbook-pro",
+      "name": "MacBook Pro",
+      "price": 1999.00,
+      "category": "laptops"
+    },
+    {
+      "id": "imac",
+      "name": "iMac",
+      "price": 1299.00,
+      "category": "laptops"
+    },
+    {
+      "id": "macbook-air",
+      "name": "MacBook Air",
+      "price": 999.00,
+      "category": "laptops"
+    },
+    {
+      "id": "studio-display",
+      "name": "Studio Display",
+      "price": 1599.00,
+      "category": "laptops"
+    },
+    {
+      "id": "asus-rog",
+      "name": "ASUS ROG",
+      "price": 1599.00,
+      "category": "laptops"
+    },
+    {
+      "id": "msi-titan",
+      "name": "MSI Titan",
+      "price": 3999.00,
+      "category": "laptops"
+    },
+    {
+      "id": "hp-pro",
+      "name": "HP PRO",
+      "price": 1399.00,
+      "category": "laptops"
+    },
+    {
+      "id": "asus-swift",
+      "name": "ASUS SWIFT",
+      "price": 2999.00,
+      "category": "laptops"
+    },
+    {
+      "id": "iphone-12-pro-max",
+      "name": "iPhone 12 Pro Max",
+      "price": 1099.00,
+      "category": "phones"
+    },
+    {
+      "id": "iphone-13-pro",
+      "name": "iPhone 13 Pro",
+      "price": 999.00,
+      "category": "phones"
+    },
+    {
+      "id": "iphone-12",
+      "name": "iPhone 12",
+      "price": 799.00,
+      "category": "phones"
+    },
+    {
+      "id": "iphone-14",
+      "name": "iPhone 14",
+      "price": 799.00,
+      "category": "phones"
+    },
+    {
+      "id": "iphone-15-pro",
+      "name": "iPhone 15 Pro",
+      "price": 1199.00,
+      "category": "phones"
+    },
+    {
+      "id": "iphone-15",
+      "name": "iPhone 15",
+      "price": 799.00,
+      "category": "phones"
+    },
+    {
+      "id": "iphone-13-pro-max",
+      "name": "iPhone 13 Pro Max",
+      "price": 1099.00,
+      "category": "phones"
+    },
+    {
+      "id": "airpods-3",
+      "name": "AirPods 3",
+      "price": 169.00,
+      "category": "headphones"
+    },
+    {
+      "id": "airpods-pro-3",
+      "name": "AirPods Pro 3",
+      "price": 249.00,
+      "category": "headphones"
+    },
+    {
+      "id": "airpods-2",
+      "name": "AirPods 2",
+      "price": 129.00,
+      "category": "headphones"
+    },
+    {
+      "id": "airpods-pro-2",
+      "name": "AirPods Pro 2",
+      "price": 249.00,
+      "category": "headphones"
+    },
+    {
+      "id": "airpods-max",
+      "name": "AirPods Max",
+      "price": 549.00,
+      "category": "headphones"
+    },
+    {
+      "id": "logitech-g435",
+      "name": "Logitech G435",
+      "price": 79.00,
+      "category": "headphones"
+    },
+    {
+      "id": "redmi-buds",
+      "name": "REDMI",
+      "price": 169.00,
+      "category": "headphones"
+    }
+  ]
+}

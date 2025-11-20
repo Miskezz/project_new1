@@ -1,15 +1,57 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
     <title>TECHNOVA</title>
 </head>
+
 <body>
+  
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h2>Кошик 🛒</h2>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+
+        <div class="cart-content">
+            <div id="cartItems">
+            </div>
+
+            <div class="cart-summary">
+                <div class="cart-summary-row">
+                    <span>Підсумок:</span>
+                    <span id="cartSubtotal">$0.00</span>
+                </div>
+                <div class="cart-summary-row">
+                    <span>Доставка:</span>
+                    <span id="cartShipping">Безкоштовно</span>
+                </div>
+                <div class="cart-summary-row total">
+                    <span>Всього:</span>
+                    <span>$<span id="cartTotal">0.00</span></span>
+                </div>
+            </div>
+
+            <div class="cart-actions">
+                <button class="cart-btn checkout-btn" onclick="checkout()">
+                    Оформити замовлення
+                </button>
+                <button class="cart-btn clear-btn" onclick="clearCart()">
+                    Очистити кошик
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Підключення скриптів -->
+    <script src="../JS/script.js"></script>
     <header>
         <div class="logo">
-             <img src="/Frontend/IMG/logo33.png" alt="logo" class="logo-image">
+            <img src="/Frontend/IMG/logo33.png" alt="logo" class="logo-image">
             <span>TECHNOVA</span>
         </div>
         <div class="icons">
@@ -250,7 +292,9 @@
         <h2>What customers say about TECHNOVA?</h2>
         <div class="reviews">
             <div class="review">
-                <p class="review-text">TECHNOVA offers a vast selection of smartphones making it easy to find exactly what you need! In many cases, the prices are lower than elsewhere. Shipping is fast and reliable.</p>
+                <p class="review-text">TECHNOVA offers a vast selection of smartphones making it easy to find exactly
+                    what you need! In many cases, the prices are lower than elsewhere. Shipping is fast and reliable.
+                </p>
                 <div class="reviewer">
                     <div class="avatar">👤</div>
                     <div>
@@ -260,7 +304,8 @@
                 </div>
             </div>
             <div class="review">
-                <p class="review-text">I adore apple so I always buy it here!! I ordered the silver laptop that came quickly and without mistakes, I've been enjoying my new purchase for a month already!</p>
+                <p class="review-text">I adore apple so I always buy it here!! I ordered the silver laptop that came
+                    quickly and without mistakes, I've been enjoying my new purchase for a month already!</p>
                 <div class="reviewer">
                     <div class="avatar">👤</div>
                     <div>
@@ -276,7 +321,7 @@
         <div class="footer-grid">
             <div>
                 <div class="logo">
-                   <img src="/Frontend/IMG/logo33.png" alt="logo" class="logo-image">
+                    <img src="/Frontend/IMG/logo33.png" alt="logo" class="logo-image">
                     <span>TECHNOVA</span>
                 </div>
             </div>
@@ -305,4 +350,5 @@
         </div>
     </footer>
 </body>
+
 </html>
