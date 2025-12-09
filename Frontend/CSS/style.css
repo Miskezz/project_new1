@@ -399,6 +399,36 @@
            background: #4f46e5;
        }
 
+    /* Footer link styles added for clickable footer items */
+    .footer-list a {
+        color: #333;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .footer-list a:hover {
+        color: #111;
+        text-decoration: underline;
+    }
+
+    .socials .social {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        background: rgba(99, 102, 241, 0.12);
+        color: #111;
+        border-radius: 50%;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .socials .social:hover {
+        background: rgba(99, 102, 241, 0.24);
+        transform: translateY(-2px);
+    }
+
        .logo-image {
            width: 40px;
            height: 40px;
